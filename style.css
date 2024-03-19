@@ -73,12 +73,12 @@ header .logo {
 
 /* nav */
 nav {
-  display: flex;
-  width: 100%;
-  padding: 0;
-  margin: 0;
   border-bottom: 1px solid var(--grey-dark-color);
   color: var(--black-color);
+}
+
+.shortcutArea {
+  display: flex;
 }
 
 nav a:link {
@@ -93,15 +93,12 @@ nav a:hover {
 
 nav .leftMenu {
   display: flex;
-  float: left;
   padding: var(--padding);
   font-size: var(--font-medium);
+  gap: 20px;
 }
 
 nav .leftMenu > li {
-  display: flex;
-  justify-content: space-around;
-  padding: 0 calc(var(--padding) / 2);
   text-align: center;
 }
 
@@ -141,15 +138,16 @@ nav .rightMenu {
   display: flex;
   padding: var(--padding);
   font-size: var(--font-medium);
-  float: right;
+  margin-left: auto;
+  gap: 10px;
 }
 
 .rightMenu li {
   display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-left: 10px;
   border: 1px solid var(--black-color);
+  height: 30px;
+  align-items: center;
+  padding: 0 20px;
 }
 
 /* Section */
@@ -158,6 +156,8 @@ nav .rightMenu {
   grid-template-columns: repeat(2, 2fr);
   grid-template-rows: repeat(2, 2fr);
   padding: var(--padding);
+  max-width: 664px;
+  margin: 0 auto;
 }
 
 .banner {
@@ -173,14 +173,12 @@ nav .rightMenu {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   padding: 0;
   margin: 0;
 }
 
-section > img {
+section > div > img {
   width: 322px;
   height: 430px;
   text-align: center;
